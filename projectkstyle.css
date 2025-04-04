@@ -1,0 +1,50 @@
+<html>
+ <head>
+   <style>
+body {
+            margin: 0;
+            padding: 0;
+            background-color: #e6f7ff; 
+            text-align: center;
+        }
+
+     img{
+         width:600px;
+         height:400px;
+
+        }
+    div{
+            text-align:center;
+            color:black;
+          }
+  div {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            background:white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+    h1 {
+         font-family:algerian;
+       }
+   p{
+         font-size:200%;
+    }
+   button {
+           display: inline-block;
+           width: 200px;
+           height: 50px; 
+           font-size: 18px;
+           color:white;
+           border-radius: 5px;
+           background: #007BFF;
+          }
+   </style>
+ </head>
+</html>
+
+   
+
+    
+

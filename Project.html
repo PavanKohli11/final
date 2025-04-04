@@ -1,0 +1,205 @@
+<html>
+<head>
+  <style>
+    .body{
+          background-image: url('beach.jpg');
+          background-size: 100% 100%;
+          }
+    .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            }
+       p {
+            font-size: 22px;
+            margin-bottom: 20px;
+            font-color:"white";
+         }
+   h1 {
+            font-size: 60px;
+            font-weight: 600;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+       }
+ .search-box {
+            background: white;
+            padding: 12px;
+            border-radius: 50px;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-box input {
+            border: none;
+            outline: none;
+            font-size: 18px;
+            width: 100%;
+            padding: 10px;
+            border-radius: 50px;
+        }
+
+        .search-box button {
+            background: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-left: 10px;
+            transition: 0.3s;
+        }
+
+        .search-box button:hover {
+            background: red;
+        }   
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            background: red;
+            border-radius: 5px;
+        }
+         .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 13;
+            width: 500px;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            color: black;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+         .toggle-btn {
+            background: white;
+            color: black;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+         .package-btn {
+            background: red;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .package-btn:hover {
+            background: darkred;
+        }
+
+
+     
+   
+  </style>
+</head>
+<script type="text/javascript">
+  function vizag(){
+                    var A =document.getElementById('text').value.toLowerCase();
+                    if(A=="vizag")
+                     {
+                       window.location.href = "vizag.html";
+                     }
+                     else if(A=='srikakulam')
+                     {
+                       window.location.href="srikakulam.html";
+                     }
+                     else if(A=="kadapa")
+                     {
+                       window.location.href="kadapa.html";
+                     }
+                     else if(A=="kurnool")
+                     {
+                      window.location.href="krunool.html";
+                     }
+                     else if(A=="eastgodavari")
+                     {
+                       window.location.href="eastgodavari.html";
+                     }
+                     else if(A=="vizayanagaram")
+                     {
+                       window.location.href="vizayanagaram.html";
+                     }
+                     else if(A=="westgodavari")
+                     {
+                      window.location.href="westgodavari.html";
+                     }
+                      else if(A=="anantapur")
+                     {
+                      window.location.href="anantapur.html";
+                     }
+                     
+
+                     
+                  }
+</script>
+                     
+<body class="body">
+    <div class="navbar">
+        <a href="project.html">Home</a>
+        <a href="packages.html">Packages</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+
+    <div class="container">
+    <h1 style="color:white;">Travel&nbsp&&nbspTourism</h1>
+    <p style="color:white;">Explore&nbsp the &nbspAndhra Pradesh&nbsp with&nbsp us</p>
+  <div class="search-box">
+    <input type="text" placeholder="Where would you like to go?" id="text">
+    <button onclick="vizag()">search</button>
+ </div>
+ </div>
+
+</br>
+  
+   
+</body>
+</html>
+ 

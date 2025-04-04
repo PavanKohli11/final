@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel & Tourism</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-image: url('beach.jpg'); /* Change to your image */
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: white;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+        }
+
+        h1 {
+            font-size: 60px;
+            font-weight: 600;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        p {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .search-box {
+            background: white;
+            padding: 12px;
+            border-radius: 50px;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-box input {
+            border: none;
+            outline: none;
+            font-size: 18px;
+            width: 100%;
+            padding: 10px;
+            border-radius: 50px;
+        }
+
+        .search-box button {
+            background: #ff5733;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-left: 10px;
+            transition: 0.3s;
+        }
+
+        .search-box button:hover {
+            background: #ff2e00;
+        }
+
+        .home-link {
+            margin-top: 20px;
+        }
+
+        .home-link a {
+            text-decoration: none;
+            font-size: 22px;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .home-link a:hover {
+            background: #ff5733;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Travel & Tourism</h1>
+        <p>Explore the world with us</p>
+        <div class="search-box">
+            <input type="text" placeholder="Where would you like to go?">
+            <button>Search</button>
+        </div>
+        <div class="home-link">
+            <a href="#">Home</a>
+        </div>
+    </div>
+</body>
+</html>

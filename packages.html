@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .package-container {
+            margin-top: 30px;
+        }
+
+        .package {
+            padding: 15px;
+            margin: 10px auto;
+            width: 80%;
+            background: #f4f4f4;
+            border-radius: 5px;
+        }
+
+        .book-btn {
+            background: red;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .book-btn:hover {
+            background: darkred;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            width: 200px;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            color: black;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+    </style>
+</head>
+<body> </script>
+        <div class="packages" id="packages">
+        <h2>Choose Your Travel Package</h2>
+
+        <!-- Dropdown to Select Destination -->
+        </br>
+     </br>
+</br>
+     </br>
+
+        <div class="dropdown">
+            <select id="destinationSelect" onchange="showPackageDetails()">
+                <option value="">Select a Destination</option>
+                <option value="vizag">Vizag</option>
+                <option value="srikakulam">Srikakulam</option>
+                <option value="kadapa">Kadapa</option>
+                <option value="kurnool">Kurnool</option>
+                <option value="eastgodavari">East Godavari</option>
+                <option value="westgodavari">West Godavari</option>
+                <option value="vizianagaram">Vizianagaram</option>
+            </select>
+        </div>
+
+        <!-- Package Details -->
+        <ul class="package-list" id="packageDetails"></ul>
+
+        <button class="close-btn" onclick="hidePackages()">Hide Packages</button>
+    </div>
+
+    <script>
+        // Show Packages when "Packages" button is clicked
+        function showPackages() {
+            document.getElementById('packages').style.display = "block";
+        }
+
+        // Hide Packages when "Hide" button is clicked
+        function hidePackages() {
+            document.getElementById('packages').style.display = "none";
+        }
+
+        // Function to display packages for selected destination
+        function showPackageDetails() {
+            let destination = document.getElementById("destinationSelect").value;
+            let packageList = document.getElementById("packageDetails");
+
+            const packages = {
+    vizag: [
+        { type: "Budget Package", price: "₹5,999", details: "2 Days / 1 Night - Beach & Araku Valley", link: "book_vizag.html" },
+        { type: "Standard Package", price: "₹12,999", details: "4 Days / 3 Nights - Borra Caves & Kailasagiri", link: "book_vizag.html" },
+        { type: "Luxury Package", price: "₹24,999", details: "5 Days / 4 Nights - Private Yacht & Resort", link: "book_vizag.html" }
+    ],
+    srikakulam: [
+        { type: "Budget Package", price: "₹4,999", details: "2 Days / 1 Night - Arasavalli Temple & Beach", link: "book_srikakulam.html" },
+        { type: "Standard Package", price: "₹10,999", details: "3 Days / 2 Nights - Sun Temple & Waterfalls", link: "book_srikakulam.html" },
+        { type: "Luxury Package", price: "₹22,999", details: "5 Days - Exclusive Resort & Private Guide", link: "book_srikakulam.html" }
+    ],
+    kadapa: [
+        { type: "Budget Package", price: "₹6,499", details: "2 Days / 1 Night - Gandikota & Belum Caves", link: "book_kadapa.html" },
+        { type: "Standard Package", price: "₹13,499", details: "4 Days / 3 Nights - Yaganti Temple & Caves", link: "book_kadapa.html" },
+        { type: "Luxury Package", price: "₹25,999", details: "5 Days - Luxury Stay & Private Tours", link: "book_kadapa.html" }
+    ],
+    kurnool: [
+        { type: "Budget Package", price: "₹5,999", details: "2 Days / 1 Night - Belum Caves & Konda Reddy Fort", link: "book_kurnool.html" },
+        { type: "Standard Package", price: "₹11,999", details: "3 Days / 2 Nights - Mahanandi & Ahobilam", link: "book_kurnool.html" },
+        { type: "Luxury Package", price: "₹23,999", details: "5 Days - Exclusive Resort & Nature Tour", link: "book_kurnool.html" }
+    ],
+    eastgodavari: [
+        { type: "Budget Package", price: "₹6,999", details: "2 Days / 1 Night - Papikondalu Boat Trip", link: "book_eastgodavari.html" },
+        { type: "Standard Package", price: "₹14,999", details: "4 Days / 3 Nights - Maredumilli Forest & Resorts", link: "book_eastgodavari.html" },
+        { type: "Luxury Package", price: "₹27,999", details: "5 Days - Private Cruise & Jungle Stay", link: "book_eastgodavari.html" }
+    ],
+    westgodavari: [
+        { type: "Budget Package", price: "₹5,499", details: "2 Days / 1 Night - Perupalem Beach & Temples", link: "book_westgodavari.html" },
+        { type: "Standard Package", price: "₹12,499", details: "3 Days / 2 Nights - Dindi Resorts & Boat Ride", link: "book_westgodavari.html" },
+        { type: "Luxury Package", price: "₹24,999", details: "5 Days - Exclusive Stay & River Cruise", link: "book_westgodavari.html" }
+    ],
+    vizianagaram: [
+        { type: "Budget Package", price: "₹4,999", details: "2 Days / 1 Night - Punyagiri & Bobbili Fort", link: "book_vizianagaram.html" },
+        { type: "Standard Package", price: "₹10,999", details: "3 Days / 2 Nights - Thatipudi & Salur Hills", link: "book_vizianagaram.html" },
+        { type: "Luxury Package", price: "₹22,999", details: "5 Days - Luxury Stay & Heritage Tour", link: "book_vizianagaram.html" }
+    ],
+    nellore: [
+        { type: "Budget Package", price: "₹5,499", details: "2 Days / 1 Night - Pulicat Lake & Nelapattu", link: "book_nellore.html" },
+        { type: "Standard Package", price: "₹11,499", details: "3 Days / 2 Nights - Udayagiri Fort & Temples", link: "book_nellore.html" },
+        { type: "Luxury Package", price: "₹23,999", details: "5 Days - Beachfront Resort & Heritage Walk", link: "book_nellore.html" }
+    ],
+    anantapur: [
+        { type: "Budget Package", price: "₹5,999", details: "2 Days / 1 Night - Lepakshi & Gooty Fort", link: "book_anantapur.html" },
+        { type: "Standard Package", price: "₹12,499", details: "3 Days / 2 Nights - Puttaparthi & Penukonda", link: "book_anantapur.html" },
+        { type: "Luxury Package", price: "₹24,999", details: "5 Days - Luxury Retreat & Cultural Tour", link: "book_anantapur.html" }
+    ],
+    guntur: [
+        { type: "Budget Package", price: "₹6,499", details: "2 Days / 1 Night - Nagarjuna Sagar & Amaravati", link: "book_guntur.html" },
+        { type: "Standard Package", price: "₹13,999", details: "4 Days / 3 Nights - Ethipothala Waterfalls & Temples", link: "book_guntur.html" },
+        { type: "Luxury Package", price: "₹26,999", details: "5 Days - Private Tours & Luxury Resorts", link: "book_guntur.html" }
+    ],
+    prakasam: [
+        { type: "Budget Package", price: "₹5,999", details: "2 Days / 1 Night - Kothapatnam Beach & Caves", link: "book_prakasam.html" },
+        { type: "Standard Package", price: "₹12,999", details: "3 Days / 2 Nights - Ongole & Bhairavakona", link: "book_prakasam.html" },
+        { type: "Luxury Package", price: "₹25,999", details: "5 Days - Exclusive Beach Resort & Safari", link: "book_prakasam.html" }
+    ],
+    chittoor: [
+        { type: "Budget Package", price: "₹6,499", details: "2 Days / 1 Night - Horsley Hills & Sri Kalahasti", link: "book_chittoor.html" },
+        { type: "Standard Package", price: "₹13,999", details: "4 Days / 3 Nights - Tirupati & Talakona", link: "book_chittoor.html" },
+        { type: "Luxury Package", price: "₹27,999", details: "5 Days - VIP Temple Darshan & Luxury Stay", link: "book_chittoor.html" }
+    ],
+    krishna: [
+        { type: "Budget Package", price: "₹5,999", details: "2 Days / 1 Night - Vijayawada & Manginapudi Beach", link: "book_krishna.html" },
+        { type: "Standard Package", price: "₹12,499", details: "3 Days / 2 Nights - Kondapalli Fort & Bhavani Island", link: "book_krishna.html" },
+        { type: "Luxury Package", price: "₹25,999", details: "5 Days - Riverfront Resort & Boat Tour", link: "book_krishna.html" }
+    ]
+};
+
+
+            packageList.innerHTML = ""; // Clear previous data
+
+            if (destination && packages[destination]) {
+                packages[destination].forEach(pkg => {
+                    let li = document.createElement("li");
+                    li.innerHTML = `
+                        <strong>${pkg.type}</strong> - ${pkg.price} <br> ${pkg.details} <br>
+                        <a href="${pkg.link}"><button class="book-btn">Book Now</button></a>
+                    `;
+                    packageList.appendChild(li);
+                });
+            }
+        }
+    </script>
+
+
+
+</body>
+</html>

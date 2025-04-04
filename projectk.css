@@ -1,0 +1,28 @@
+<html>
+<head>
+  <style>
+    h1 {
+       font-family: Algerian;
+       color:blue;
+    }
+    p{
+      font-style: arial;
+      font-size:200%;
+     }
+    img {
+      width:600;
+      height:400;
+    }
+    button {
+      width: 200px;
+      height: 50px;
+      font-size: 18px
+    }
+  </style>
+</head>
+<body>
+  <h1>the</h1>
+  <p>pp</p>
+</body>
+
+</html>
